@@ -1,4 +1,4 @@
-package usedb
+package godb
 
 import (
 	"database/sql"

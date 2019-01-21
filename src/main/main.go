@@ -1,10 +1,13 @@
 package main
 
 import (
+	"gojson"
+
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
+	gojson.Makejson()
 	//openDB()
 	//dbinquire()
 	/* go func() {
@@ -12,5 +15,5 @@ func main() {
 		signal.Notify(c, os.Interrupt, os.Kill)
 		<-c
 		closeDB()
-	}() */
+	}()*/
 }
