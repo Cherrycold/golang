@@ -26,4 +26,5 @@ func Makejson() {
 		log.Println(err)
 	}
 	fmt.Println(user)
+	fmt.Println(user)
 }
