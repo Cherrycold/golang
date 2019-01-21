@@ -8,6 +8,7 @@ import (
 
 func main() {
 	gojson.Makejson()
+	gojson.Expjson()
 	//openDB()
 	//dbinquire()
 	/* go func() {
