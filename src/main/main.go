@@ -1,14 +1,15 @@
 package main
 
 import (
-	"gojson"
+	"httpstudy"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-	gojson.Makejson()
-	gojson.Expjson()
+	httpstudy.Start()
+	//gojson.Makejson()
+	//gojson.Expjson()
 	//openDB()
 	//dbinquire()
 	/* go func() {
