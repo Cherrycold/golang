@@ -1,14 +1,47 @@
-﻿#golang
+﻿# golang
+
+2019.1.26
+---
+### **git再学习**
+remote的使用
+git remote origin master
+其中origin相当于远程仓库的一个别名
+master是远程仓库的分支名
 
 2019.1.25
 ---
-###内嵌类型
 
-###Actor模型的学习  
+### **反射的使用**
+用在运行时操作对象
+reflect.Value和reflect.type
+用来获取任意对象的值和类型
+
+使用 “值.Interface().(类型)”来还原
+
+v.Elem()  
+Elem返回v持有的接口保管的值的Value封装，或者v持有的指针指向的值的Value封装。如果v的Kind不是Interface或Ptr会panic；如果v持有的值为nil，会返回Value零值。
+
+v.Kind()
+Kind返回v持有的值的分类，如果v是Value零值，返回值为Invalid
+
+
+
+### **sync/atomic**  
+原子操作，用来实现同步  
+类型共有六种：int32, int64, uint32, uint64, uintptr, unsafe.Pinter  
+数据的增减使用Add，读取使用Load
+sync.WaitGroup
+Add()，Done()，Wait()，加，减，阻塞直到所有goroutine执行结束
+
+
+### **内嵌类型**  
+可以在一个结构体或接口中嵌套一个接口或者结构体
+
+### **Actor模型的学习**  
 每个actor之间是独立的，他是封装的是状态和行为的对象
 异步的，消息和发送者之间是解耦的
 
-###接口和断言  
+### **接口和断言**  
 如果一个类型实现了这些方法，那么他就是这个接口类型的实例   
 **只有接口存储的类型和对象都是nil，接口才是nil**  
 类似于x.(T)，x是一个接口类型，T表示一个类型  
